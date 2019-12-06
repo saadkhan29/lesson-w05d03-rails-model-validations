@@ -90,12 +90,12 @@ class Person < ActiveRecord::Base
   validates :first_name, presence: true
 end
 
-person = Person.new(last_name: "Bashir")
+person = Person.new(last_name: "Khan")
 person.valid?  # => checks validations and returns a boolean
 person.save    # => rollback db
 person.save!   # => specifies failure
 
-person.first_name = "Usman"
+person.first_name = "Ali"
 person.valid?
 person.save
 ```
